@@ -8,7 +8,7 @@
 -        boolean value whether the insertion was succesfully completed or not.
 """
 
-from sqlite_connection import con, cursor
+from db.sqlite_connection import con, cursor
 
 # Tuple that will contain required info.
 basic_data = ()
