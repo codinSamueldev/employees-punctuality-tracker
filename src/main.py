@@ -1,7 +1,8 @@
 from db.sqlite_connection import con, cursor
 from retrieve_data.employees.table import RetrieveEmployeesTable
 from retrieve_data.schedules.table import RetrieveSchedulesTable
-from useful_strings import INITIAL_WELCOME_OPTIONS, RETRIEVAL_OPTIONS, GOODBYE
+from input_data.tracker.insert_new_data_to_tracker import InsertIntoTrackerTable
+from useful_strings import INITIAL_WELCOME_OPTIONS, RETRIEVAL_OPTIONS, INSERT_OPTIONS, GOODBYE
 
 
 
@@ -22,8 +23,20 @@ if __name__ == '__main__':
                 pass
                 break
         elif user_initial_choice == 2:
-            pass
-            break
+            user_insert_options = int(input(INSERT_OPTIONS))
+
+            if user_insert_options == 1:
+                # Code here TODO...
+                pass
+                break
+            elif user_insert_options == 2:
+                # Code here TODO...
+                pass
+                break
+            elif user_insert_options == 3:
+                InsertIntoTrackerTable(con=con, cursor=cursor).insert_new_data_to_tracker()
+                pass
+                break
         elif user_initial_choice == 3:
             print(GOODBYE)
             break

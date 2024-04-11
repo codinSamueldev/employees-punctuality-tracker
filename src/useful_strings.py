@@ -14,5 +14,13 @@ RETRIEVAL_OPTIONS = """
         
         Type your option (1, 2, 3) and hit enter: """
 
+INSERT_OPTIONS = """
+        Of course! Please tell me what kind of data would you insert into the database:
+            1) Employees.
+            2) Schedules.
+            3) Punctuality tracker.
+        
+        Type your option (1, 2, 3) and hit enter: """
+
 GOODBYE = """
         Alright, alright, alright! Thanks for using us :D """
