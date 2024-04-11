@@ -13,7 +13,7 @@ class RetrieveEmployeesTable:
             None
 
         Returns:
-            An unsorted array which contains employees info. 
+            An unsorted array of tuples which contains employees info. 
         """
         try:
             self.cursor.execute("SELECT * FROM employees;")
