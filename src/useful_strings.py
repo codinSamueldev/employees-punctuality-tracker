@@ -24,3 +24,6 @@ INSERT_OPTIONS = """
 
 GOODBYE = """
         Alright, alright, alright! Thanks for using us :D """
+
+NOT_VALID_OPTION = """
+        That choice it is not valid, try again... """
