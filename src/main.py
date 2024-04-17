@@ -3,6 +3,7 @@ from retrieve_data.employees.table import RetrieveEmployeesTable
 from retrieve_data.schedules.table import RetrieveSchedulesTable
 from retrieve_data.tracker.table import RetrieveTrackerTable
 from input_data.tracker.insert_new_data_to_tracker import InsertIntoTrackerTable
+from input_data.schedules.insert_schedule_script import InsertIntoSchedulesTable
 from useful_strings import INITIAL_WELCOME_OPTIONS, RETRIEVAL_OPTIONS, INSERT_OPTIONS, GOODBYE
 
 
@@ -30,12 +31,10 @@ def main():
                 pass
                 break
             elif user_insert_options == 2:
-                # Code here TODO...
-                pass
+                InsertIntoSchedulesTable(con=con, cursor=cursor).insert_new_schedule()
                 break
             elif user_insert_options == 3:
                 InsertIntoTrackerTable(con=con, cursor=cursor).insert_new_data_to_tracker()
-                pass
                 break
         elif user_initial_choice == 3:
             print(GOODBYE)
