@@ -5,8 +5,7 @@ from input_data.tracker.insert_new_data_to_tracker import InsertIntoTrackerTable
 from useful_strings import INITIAL_WELCOME_OPTIONS, RETRIEVAL_OPTIONS, INSERT_OPTIONS, GOODBYE
 
 
-
-if __name__ == '__main__':
+def main():
     while True:
         user_initial_choice = int(input(INITIAL_WELCOME_OPTIONS))
 
@@ -40,3 +39,7 @@ if __name__ == '__main__':
         elif user_initial_choice == 3:
             print(GOODBYE)
             break
+
+
+if __name__ == '__main__':
+    main()
