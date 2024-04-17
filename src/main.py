@@ -1,6 +1,7 @@
 from db.sqlite_connection import con, cursor
 from retrieve_data.employees.table import RetrieveEmployeesTable
 from retrieve_data.schedules.table import RetrieveSchedulesTable
+from retrieve_data.tracker.table import RetrieveTrackerTable
 from input_data.tracker.insert_new_data_to_tracker import InsertIntoTrackerTable
 from useful_strings import INITIAL_WELCOME_OPTIONS, RETRIEVAL_OPTIONS, INSERT_OPTIONS, GOODBYE
 
@@ -19,7 +20,7 @@ def main():
                 RetrieveSchedulesTable(con=con, cursor=cursor).retrieve_employees_schedules()
                 break
             elif user_retrieval_options == 3:
-                pass
+                RetrieveTrackerTable(con=con, cursor=cursor).retrieve_tardiness_tracker()
                 break
         elif user_initial_choice == 2:
             user_insert_options = int(input(INSERT_OPTIONS))
